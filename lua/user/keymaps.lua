@@ -53,7 +53,8 @@ keymap("v", ">", ">gv", opts)
 -- Plugins --
 
 -- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>tt", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>tc", ":NvimTreeCollapse<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)

@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = { "gitcommit"},
+	pattern = { "gitcommit" },
 	callback = function()
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
@@ -19,11 +19,13 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = { "markdown" },
 	callback = function()
+		vim.opt.colorcolumn = "80"
+		vim.opt_local.textwidth = 80
+    vim.opt_local.formatoptions = "tcqn]a"
 		vim.opt_local.wrap = true
 		vim.opt_local.spell = true
 	end,
 })
-
 
 vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 -- vim.api.nvim_create_autocmd({ "BufEnter" }, {
@@ -72,10 +74,11 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
 
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	callback = function()
-	local line_count = vim.api.nvim_buf_line_count(0)
+		local line_count = vim.api.nvim_buf_line_count(0)
 		if line_count >= 5000 then
 			vim.cmd("IlluminatePauseBuf")
 		end
 	end,
 })
 
+-- my autocommands:
