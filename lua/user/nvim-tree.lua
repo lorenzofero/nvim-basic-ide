@@ -54,7 +54,7 @@ nvim_tree.setup {
     },
   },
   view = {
-    width = 30,
+    width = 40,
     side = "left",
     number = true,
     relativenumber = true,
@@ -66,4 +66,7 @@ nvim_tree.setup {
       },
     },
   },
+  git = {
+    ignore = false, -- show also git-ignored files
+  }
 }

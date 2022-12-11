@@ -1,6 +1,7 @@
 if vim.g.vscode then
 	require("user.options")
 else
+	require("user.impatient")
 	require("user.options")
 	require("user.keymaps")
 	require("user.plugins")
@@ -17,7 +18,6 @@ else
 	require("user.lualine")
 	require("user.toggleterm")
 	require("user.project")
-	require("user.impatient")
 	require("user.illuminate")
 	require("user.indentline")
 	require("user.alpha")

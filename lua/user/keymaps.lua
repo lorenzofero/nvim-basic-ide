@@ -38,6 +38,12 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Close buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
+-- Minimap
+-- codewindow.open_minimap()
+-- codewindow.close_minimap()
+-- codewindow.toggle_minimap()
+-- codewindow.toggle_focus()
+
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
